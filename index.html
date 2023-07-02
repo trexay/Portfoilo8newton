@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<link href='https://fonts.googleapis.com/css?family=Carrois Gothic' rel='stylesheet'>
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  background-color: #f7ffff;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 20px 20px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding: 20px 20px;
+ }
+.card {
+  width: 300px;
+  height: 280px;
+  padding: 0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card * {
+  transition: 0.3s ease all;
+}
+
+.card img {
+  margin: 0;
+  width: 300px;
+  height: 224px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  margin: 0;
+  padding: 12px 12px 48px;
+  line-height: 32px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card .focus-content {
+  display: block;
+  padding: 8px 12px;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card:hover img, .card:focus-within img {
+  margin-top: -80px;
+}
+
+.card:hover h3, .card:focus-within h3 {
+  padding: 8px 12px 0;
+}
+#navbar {
+  overflow: hidden;
+  background-color: #ffd9cf;
+  transition: 0.2s;
+  position: fixed;
+  width: 100%;
+  display: block;
+  top: -100px;
+}
+
+#navbar #h2 {
+  float: left;
+  display: block;
+  color: #946d80;
+  text-align: center;
+    transition: 0.2s;
+  padding: 20px;
+  text-decoration: none;
+}
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important;
+  }
+  #navbar h2 {
+    float: none;
+    display: block;
+    text-align: left;
+      .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+  }
+}
+.slideshow-container {
+  max-height: 2000px;
+  width: 25%;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+  margin: 0px;
+}
+
+.main {
+  margin-left: 25%;
+  margin-top:20px;
+  padding: 25px 0px;
+  }
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.container {
+  width: 100%;
+  background-color: #ebf0f5;
+}
+
+.skills {
+  text-align: right;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.volleyball {width: 70%; background-color: #ffd3b6;}
+.code {width: 50%; background-color: #ffc8b6;}
+.osu {width: 65%; background-color: #ffbab6;}
+.riz {width: 30%; background-color: #ffaab6;}
+.slep {width: 100%; background-color: #ff92b6;}
+.spek {width: 40%; background-color: #ff70b6;}
+.in {width: 50%; background-color: #ff4e9d;}
+.ex {width: 50%; background-color: #ff2e70;}
+</style>
+<body style="font-family: Carrois Gothic;">
+<div class="slideshow-container">
+
+
+
+<div class="mySlides fade">
+  <img src="C:\Users\User\Downloads\Images(ICT8)\353995879_634277315299844_8618750318539769334_n.jpg" style="width:340px; height:750px">
+</div>
+
+
+<div class="mySlides fade">
+  <img src="C:\Users\User\Downloads\Images(ICT8)\354010761_1024066675632109_1907287399721915923_n.jpg" style="width:400px; height:750px">
+</div>
+
+
+<div class="mySlides fade">
+  <img src="C:\Users\User\Downloads\Images(ICT8)\354040250_6053138791475790_2804768424866479610_n.jpg" style="width:400px; height:790px">
+</div>
+
+<div class="mySlides fade">
+  <img src="C:\Users\User\Downloads\Images(ICT8)\354082116_246675001417678_144768572808719923_n.jpg" style="width:450px; height:790px">
+</div>
+
+<div class="mySlides fade">
+  <img src="C:\Users\User\Downloads\Images(ICT8)\354112263_817220226628147_6896300767961735195_n.jpg" style="width:450px; height:790px">
+</div>
+
+<div class="mySlides fade">
+  <img src="C:\Users\User\Downloads\Images(ICT8)\354138524_951894546090135_585145891720857830_n.jpg" style="width:450px; height:790px">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<div class="main">
+<div id="navbar">
+ <h2 id="h2"> Jan Aurie Trixie T. Odal</h2>
+</div>
+
+<div style="margin-top:5px;padding:10px 50px 50px;font-size:30px">
+  <h1 style="font-size:90px; text-align:right;"><strong>JAN AURIE TRIXIE T.ODAL</strong></h1>
+  <h3 style="font-size:45px;">I am a <span style="color:#6495ED; font-familty: century gothic; text-size: 25px" id="change">Student</span></h3>
+   <br>
+  <br>
+  <h3> About Me</h3>
+  <p style="color: #2F4F4F; font-size: 15px;">I am Jan Aurie Trixie T. Odal. I was born on the 13th of January 2009 which makes me a capricorn and a fourteen-year old right now. I am the youngest of an all girls family. I was born and raised here in Dumaguete City, Negros Oriental but my first language is Waray because my parents originated from Leyte and Samar. I like drawing, playing volleyball, baking, binge-watching horror movies, working out, and many more. I like trying out new things but the problem is that I don't commit to only one hobby or skill which makes me unable to improve my skills more. Although I'm still open to learning new things but I'm trying my best to hone my skills in drawing and volleyball more. </p>
+  <br>
+  <br>
+  <h4> My Skills</h4>
+  <span style="color: #2F4F4F; font-size: 15px;"><p>Volleyball</p>
+<div class="container">
+  <div class="skills volleyball">70%</div>
+</div>
+
+<p>Coding</p>
+<div class="container">
+  <div class="skills code">50%</div>
+</div>
+
+<p>Artist</p>
+<div class="container">
+  <div class="skills osu">65%</div>
+</div>
+
+<p>Rizzing Ppl up</p>
+<div class="container">
+  <div class="skills riz">30%</div>
+</div>
+<p>Sleeping</p>
+<div class="container">
+  <div class="skills slep">1000%</div>
+</div>
+
+<p>Dancer</p>
+<div class="container">
+  <div class="skills spek">40%</div>
+</div>
+
+<p>Introvert</p>
+<div class="container">
+  <div class="skills in">50%</div>
+</div>
+
+<p>Extrovert</p>
+<div class="container">
+  <div class="skills ex">50%</div>
+</div>
+</span>
+<br>
+<br>
+
+
+<h5>To know me better, you can add me on social media ><<h5>
+
+<a href= "https://www.instagram.com/accounts/login/"><img src="C:\Users\User\Downloads\Images(ICT8)\new-instagram-logo-new-look-designboom-01.jpg" height=100 width=100 align=center></a>
+
+<a href= "https://www.facebook.com/login/"><img src="C:\Users\User\Downloads\Images(ICT8)\facebook-social-media-icon-design-template-vector-png_126986.png" height=100 width=100 align=center></a>
+
+<a href= "https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den"><img src="C:\Users\User\Downloads\Images(ICT8)\pngtree-twitter-social-media-round-icon-png-image_6315985.png" height=80 width=80 align=center></a>
+
+<a href= "https://www.tiktok.com/login"><img src="C:\Users\User\Downloads\Images(ICT8)\download (2).png" height=80 width=80 align=center></a>
+
+
+
+
+</div>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+var typed = new Typed('#change', {
+	strings: ['Student', 'Duscian', 'Volleyball player', 'Professional Sleeper', 'Science High Survivor', 'Cool khed', 'Hiwi (medjo harhar)', 'Princess alpha barbie hybrid', 'Shrek Lover', 'Child of God^^'],
+	typeSpeed: 70,
+	backSpeed: 50,
+	loop: true,
+	})
+</script>
+<script>
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+}
+
+
+
+</script>
+</body>
+</html> 
